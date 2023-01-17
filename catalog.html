@@ -224,7 +224,8 @@
 			</ul>
 
 			<div class="catalog__sorting">
-				<button class="catalog__button" type="button" title="Filters"><span class="sr-only">Open filtrate menu</span></button>
+				<button class="catalog__button" type="button" title="Filters"><span class="sr-only">Open filtrate
+						menu</span></button>
 				<select class="catalog__select" name="catalog-select" id="catalog-select">
 					<option value="by popularity">By popularity</option>
 					<option value="From cheap">From cheap</option>
@@ -268,12 +269,12 @@
 								<ul class="catalog__filters">
 									<li class="catalog__line">
 										<input class="catalog__input sr-only" type="checkbox" id="catalog-availability-1"
-											name="catalog-checkbox">
+											name="catalog-availability">
 										<label class="catalog__label catalog__check" for="catalog-availability-1">Available</label>
 									</li>
 									<li class="catalog__line">
 										<input class="catalog__input sr-only" type="checkbox" id="catalog-availability-2"
-											name="catalog-checkbox">
+											name="catalog-availability">
 										<label class="catalog__label catalog__check" for="catalog-availability-2">On order</label>
 									</li>
 								</ul>
@@ -289,15 +290,15 @@
 							<div class="catalog__box">
 								<ul class="catalog__filters">
 									<li class="catalog__line">
-										<input class="catalog__input sr-only" type="radio" id="catalog-new-1" name="catalog-radio" checked>
+										<input class="catalog__input sr-only" type="radio" id="catalog-new-1" name="catalog-new" checked>
 										<label class="catalog__label" for="catalog-new-1">All</label>
 									</li>
 									<li class="catalog__line">
-										<input class="catalog__input sr-only" type="radio" id="catalog-new-2" name="catalog-radio">
+										<input class="catalog__input sr-only" type="radio" id="catalog-new-2" name="catalog-new">
 										<label class="catalog__label" for="catalog-new-2">New</label>
 									</li>
 									<li class="catalog__line">
-										<input class="catalog__input sr-only" type="radio" id="catalog-new-3" name="catalog-radio">
+										<input class="catalog__input sr-only" type="radio" id="catalog-new-3" name="catalog-new">
 										<label class="catalog__label" for="catalog-new-3">Sales</label>
 									</li>
 								</ul>
@@ -311,46 +312,40 @@
 								Price
 							</label>
 							<div class="catalog__box">
-								<div class="catalog__price">
-									<div class="catalog__range">
-										<div class="catalog__progress"></div>
-										<input class="catalog__slider catalog__slider--from" type="range" min="50" max="50000" value="6000">
-										<input class="catalog__slider catalog__slider--to" type="range" min="50" max="50000" value="30000">
-									</div>
-									<div class="catalog__inner">
-										<label class="catalog__result">
-											from
-											<input class="catalog__num catalog__num--from" value="50" type="number">
-										</label>
-										<label class="catalog__result">
-											to
-											<input class="catalog__num catalog__num--to" value="50000" type="number">
-										</label>
-									</div>
+								<div class="catalog__range"></div>
+								<div class="catalog__inputs">
+									<label class="catalog__result">
+										from
+										<input class="catalog__num catalog__num--from" min="50" max="50000" value="7000" type="number" id="range-slider-from" name="range-slider-input">
+									</label>
+									<label class="catalog__result">
+										to
+										<input class="catalog__num catalog__num--to" min="50" max="50000" value="30000" type="number" id="range-slider-to" name="range-slider-input">
+									</label>
 								</div>
 							</div>
 						</div>
 
-							<ul class="catalog__bars">
-								<li class="catalog__bar">
-									<label class="catalog__subject" for="catalog-bar-select-1">Power, h.p.</label>
-									<select class="catalog__bar-select" name="catalog-bar-select" id="catalog-bar-select-1">
-										<option value="All">All</option>
-										<option value="50">50</option>
-										<option value="70">70</option>
-										<option value="100">100</option>
-									</select>
-								</li>
-								<li class="catalog__bar">
-									<label class="catalog__subject" for="catalog-bar-select-2">Max speed</label>
-									<select class="catalog__bar-select" name="catalog-bar-select" id="catalog-bar-select-2">
-										<option value="All">All</option>
-										<option value="70">70</option>
-										<option value="90">90</option>
-										<option value="120">120</option>
-									</select>
-								</li>
-							</ul>
+						<ul class="catalog__bars">
+							<li class="catalog__bar">
+								<label class="catalog__subject" for="catalog-bar-select-1">Power, h.p.</label>
+								<select class="catalog__bar-select" name="catalog-bar-select" id="catalog-bar-select-1">
+									<option value="All">All</option>
+									<option value="50">50</option>
+									<option value="70">70</option>
+									<option value="100">100</option>
+								</select>
+							</li>
+							<li class="catalog__bar">
+								<label class="catalog__subject" for="catalog-bar-select-2">Max speed</label>
+								<select class="catalog__bar-select" name="catalog-bar-select" id="catalog-bar-select-2">
+									<option value="All">All</option>
+									<option value="70">70</option>
+									<option value="90">90</option>
+									<option value="120">120</option>
+								</select>
+							</li>
+						</ul>
 
 						<div class="catalog__row">
 							<input class="catalog__trigger sr-only" type="checkbox" id="catalog-sales-trig" checked>
@@ -361,23 +356,19 @@
 							<div class="catalog__box">
 								<ul class="catalog__filters catalog__filters--no-gap">
 									<li class="catalog__line">
-										<input class="catalog__input sr-only" type="checkbox" id="catalog-sales-1"
-											name="catalog-checkbox">
+										<input class="catalog__input sr-only" type="checkbox" id="catalog-sales-1" name="catalog-sales">
 										<label class="catalog__widget" for="catalog-sales-1">sale</label>
 									</li>
 									<li class="catalog__line">
-										<input class="catalog__input sr-only" type="checkbox" id="catalog-sales-2"
-											name="catalog-checkbox">
+										<input class="catalog__input sr-only" type="checkbox" id="catalog-sales-2" name="catalog-sales">
 										<label class="catalog__widget" for="catalog-sales-2">hit</label>
 									</li>
 									<li class="catalog__line">
-										<input class="catalog__input sr-only" type="checkbox" id="catalog-sales-3"
-											name="catalog-checkbox">
+										<input class="catalog__input sr-only" type="checkbox" id="catalog-sales-3" name="catalog-sales">
 										<label class="catalog__widget" for="catalog-sales-3">new</label>
 									</li>
 									<li class="catalog__line">
-										<input class="catalog__input sr-only" type="checkbox" id="catalog-sales-4"
-											name="catalog-checkbox">
+										<input class="catalog__input sr-only" type="checkbox" id="catalog-sales-4" name="catalog-sales">
 										<label class="catalog__widget" for="catalog-sales-4">dealer</label>
 									</li>
 								</ul>
@@ -395,22 +386,22 @@
 								<ul class="catalog__filters">
 									<li class="catalog__line">
 										<input class="catalog__input sr-only" type="checkbox" id="catalog-country-1"
-											name="catalog-checkbox">
+											name="catalog-country">
 										<label class="catalog__label catalog__check" for="catalog-country-1">USA</label>
 									</li>
 									<li class="catalog__line">
 										<input class="catalog__input sr-only" type="checkbox" id="catalog-country-2"
-											name="catalog-checkbox">
+											name="catalog-country">
 										<label class="catalog__label catalog__check" for="catalog-country-2">Ukraine</label>
 									</li>
 									<li class="catalog__line">
 										<input class="catalog__input sr-only" type="checkbox" id="catalog-country-3"
-											name="catalog-checkbox">
+											name="catalog-country">
 										<label class="catalog__label catalog__check" for="catalog-country-3">China</label>
 									</li>
 									<li class="catalog__line">
 										<input class="catalog__input sr-only" type="checkbox" id="catalog-country-4"
-											name="catalog-checkbox">
+											name="catalog-country">
 										<label class="catalog__label catalog__check" for="catalog-country-4">Germany</label>
 									</li>
 								</ul>
@@ -430,18 +421,15 @@
 							<div class="catalog__box">
 								<ul class="catalog__filters">
 									<li class="catalog__line">
-										<input class="catalog__input sr-only" type="checkbox" id="catalog-brand-1"
-											name="catalog-checkbox">
+										<input class="catalog__input sr-only" type="checkbox" id="catalog-brand-1" name="catalog-brand">
 										<label class="catalog__label catalog__check" for="catalog-brand-1">Starboard</label>
 									</li>
 									<li class="catalog__line">
-										<input class="catalog__input sr-only" type="checkbox" id="catalog-brand-2"
-											name="catalog-checkbox">
+										<input class="catalog__input sr-only" type="checkbox" id="catalog-brand-2" name="catalog-brand">
 										<label class="catalog__label catalog__check" for="catalog-brand-2">Red paddle SUP</label>
 									</li>
 									<li class="catalog__line">
-										<input class="catalog__input sr-only" type="checkbox" id="catalog-brand-3"
-											name="catalog-checkbox">
+										<input class="catalog__input sr-only" type="checkbox" id="catalog-brand-3" name="catalog-brand">
 										<label class="catalog__label catalog__check" for="catalog-brand-3">Jobe SUP</label>
 									</li>
 								</ul>
@@ -458,23 +446,19 @@
 							<div class="catalog__box">
 								<ul class="catalog__filters catalog__filters--no-gap">
 									<li class="catalog__line">
-										<input class="catalog__input sr-only" type="checkbox" id="catalog-color-1"
-											name="catalog-checkbox">
+										<input class="catalog__input sr-only" type="checkbox" id="catalog-color-1" name="catalog-color">
 										<label class="catalog__widget" for="catalog-color-1">red</label>
 									</li>
 									<li class="catalog__line">
-										<input class="catalog__input sr-only" type="checkbox" id="catalog-color-2"
-											name="catalog-checkbox">
+										<input class="catalog__input sr-only" type="checkbox" id="catalog-color-2" name="catalog-color">
 										<label class="catalog__widget" for="catalog-color-2">blue</label>
 									</li>
 									<li class="catalog__line">
-										<input class="catalog__input sr-only" type="checkbox" id="catalog-color-3"
-											name="catalog-checkbox">
+										<input class="catalog__input sr-only" type="checkbox" id="catalog-color-3" name="catalog-color">
 										<label class="catalog__widget" for="catalog-color-3">white</label>
 									</li>
 									<li class="catalog__line">
-										<input class="catalog__input sr-only" type="checkbox" id="catalog-color-4"
-											name="catalog-checkbox">
+										<input class="catalog__input sr-only" type="checkbox" id="catalog-color-4" name="catalog-color">
 										<label class="catalog__widget" for="catalog-color-4">black</label>
 									</li>
 								</ul>
@@ -489,26 +473,23 @@
 								Model
 							</label>
 							<div class="catalog__box">
-								<input class="catalog__field" type="text" id="catalog-field" name="catalog-field" placeholder="Enter model">
+								<input class="catalog__field" type="text" id="catalog-field" name="catalog-field"
+									placeholder="Enter model">
 								<ul class="catalog__filters">
 									<li class="catalog__line">
-										<input class="catalog__input sr-only" type="checkbox" id="catalog-model-1"
-											name="catalog-checkbox">
+										<input class="catalog__input sr-only" type="checkbox" id="catalog-model-1" name="catalog-model">
 										<label class="catalog__label catalog__check" for="catalog-model-1">GLADIATOR SUP 10'6″</label>
 									</li>
 									<li class="catalog__line">
-										<input class="catalog__input sr-only" type="checkbox" id="catalog-model-2"
-											name="catalog-checkbox">
+										<input class="catalog__input sr-only" type="checkbox" id="catalog-model-2" name="catalog-model">
 										<label class="catalog__label catalog__check" for="catalog-model-2">Molokai 11.2 Carbon.</label>
 									</li>
 									<li class="catalog__line">
-										<input class="catalog__input sr-only" type="checkbox" id="catalog-model-3"
-											name="catalog-checkbox">
+										<input class="catalog__input sr-only" type="checkbox" id="catalog-model-3" name="catalog-model">
 										<label class="catalog__label catalog__check" for="catalog-model-3">Hydro Force Oceana 10″</label>
 									</li>
 									<li class="catalog__line">
-										<input class="catalog__input sr-only" type="checkbox" id="catalog-model-4"
-											name="catalog-checkbox">
+										<input class="catalog__input sr-only" type="checkbox" id="catalog-model-4" name="catalog-model">
 										<label class="catalog__label catalog__check" for="catalog-model-4">Alpha Caprice ACTIVE-11.6</label>
 									</li>
 								</ul>
@@ -553,7 +534,8 @@
 							</div>
 							<a class="product__link" href="#">
 								<div class="product__img-box">
-									<img class="product__img" src="images/products/sup-boards/sup-2.jpg" alt="Shark Sups 9'2 ALL ROUND SURF.">
+									<img class="product__img" src="images/products/sup-boards/sup-2.jpg"
+										alt="Shark Sups 9'2 ALL ROUND SURF.">
 								</div>
 								<h3 class="product__title">Shark Sups 9'2 ALL ROUND SURF.</h3>
 								<div class="product__price">399<span> €</span></div>
@@ -591,7 +573,8 @@
 							</div>
 							<a class="product__link" href="#">
 								<div class="product__img-box">
-									<img class="product__img" src="images/products/sup-boards/sup-4.jpg" alt="Jobe Aero Sup 11'6 Package.">
+									<img class="product__img" src="images/products/sup-boards/sup-4.jpg"
+										alt="Jobe Aero Sup 11'6 Package.">
 								</div>
 								<h3 class="product__title">Jobe Aero Sup 11'6 Package.</h3>
 								<div class="product__price">999<span> €</span></div>
@@ -629,7 +612,8 @@
 							</div>
 							<a class="product__link" href="#">
 								<div class="product__img-box">
-									<img class="product__img" src="images/products/sup-boards/sup-2.jpg" alt="Shark Sups 9'2 ALL ROUND SURF.">
+									<img class="product__img" src="images/products/sup-boards/sup-2.jpg"
+										alt="Shark Sups 9'2 ALL ROUND SURF.">
 								</div>
 								<h3 class="product__title">Shark Sups 9'2 ALL ROUND SURF.</h3>
 								<div class="product__price">399<span> €</span></div>
@@ -705,7 +689,8 @@
 							</div>
 							<a class="product__link" href="#">
 								<div class="product__img-box">
-									<img class="product__img" src="images/products/sup-boards/sup-4.jpg" alt="Jobe Aero Sup 11'6 Package.">
+									<img class="product__img" src="images/products/sup-boards/sup-4.jpg"
+										alt="Jobe Aero Sup 11'6 Package.">
 								</div>
 								<h3 class="product__title">Jobe Aero Sup 11'6 Package.</h3>
 								<div class="product__price">999<span> €</span></div>
